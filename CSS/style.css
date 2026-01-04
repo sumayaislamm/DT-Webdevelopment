@@ -68,15 +68,17 @@ body {
 /* Main section  */
 
 /*-------------- Section 01 started----------  */
+.task-section{
 
-.h2_and_btn {
+    margin: 10px 150px;
+}
+.task-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 150px;
 }
 
-.h2_and_btn h2 {
+.task-header h2 {
     color: var(--color-primary);
     font-weight: 700;
     letter-spacing: 2%;
@@ -84,26 +86,24 @@ body {
     font-style: bold;
     font-size: 28px;
 }
-.h5_and_p{
+.task-description{
     background-color: var(--color-secondary);
-    margin: 10px 150px;
     padding: 8px 16px;
-    border-radius: 16px;
+    border-radius: 16px; 
+    line-height: 100%;
+    letter-spacing: 2%;
 }
-.h5_and_p h5{
+.task-description h5{
     font-weight: 700;
     font-style: bold;
-    font-size: 20px;  
-    line-height: 100%;
-    letter-spacing: 2%;
+    font-size: 20px;
 }
-.h5_and_p p{
+.task-description p{
     font-weight: 400;
     font-style: normal;
-    font-size: 14px; 
-    line-height: 100%;
-    letter-spacing: 2%;
+    font-size: 14px;
 }
 /*-------------- Section 01 ended----------  */
+
 /*-------------- Section 02 started----------  */
 
