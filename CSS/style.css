@@ -26,7 +26,7 @@ body {
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -52,6 +52,7 @@ body {
     border: none;
     color: var(--color-white);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 /* Vertical Dots  */
@@ -61,7 +62,17 @@ body {
     bottom: 9px;
     color: var(--color-primary);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+/* Hover effect for both */
+.icon-btn:hover,
+.icon_more:hover {
+    transform: translateY(-3px);
+}
+
+
+
 
 /* --------------Navbar end---------------  */
 
