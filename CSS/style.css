@@ -1,0 +1,39 @@
+:root {
+    --color-primary: #0029FF;
+    --color-secondary: #E9ECEF;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-gray: #FEFFC033;
+    --color-light-gray: #F2F2F2;
+    --color-light-yellow: #FEFFC0;
+
+}
+body{
+    margin: 0;
+}
+/* main navbar  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  background-color: var(--color-light-gray);
+  padding: 10px 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Right side icons */
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+}
+/* Vertical Dots  */
+.icon_more {
+  font-size: 22px;
+  position: relative;
+  bottom: 9px;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
