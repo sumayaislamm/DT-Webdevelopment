@@ -47,7 +47,7 @@ body {
 }
 
 /* Right side icons */
-.icon-btn {
+.icon_btn {
     background: none;
     border: none;
     color: var(--color-white);
@@ -66,7 +66,7 @@ body {
 }
 
 /* Hover effect for both */
-.icon-btn:hover,
+.icon_btn:hover,
 .icon_more:hover {
     transform: translateY(-3px);
 }
@@ -79,42 +79,110 @@ body {
 /* Main section  */
 
 /*-------------- Section 01 started----------  */
-.task-section{
-
+.task_section {
     margin: 10px 150px;
 }
-.task-header {
+
+.task_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.task-header h2 {
+.task_header h2 {
     color: var(--color-primary);
     font-weight: 700;
     letter-spacing: 2%;
     line-height: 100%;
-    font-style: bold;
     font-size: 28px;
 }
-.task-description{
+
+.task_description {
     background-color: var(--color-secondary);
     padding: 8px 16px;
-    border-radius: 16px; 
+    border-radius: 16px;
     line-height: 100%;
     letter-spacing: 2%;
 }
-.task-description h5{
+
+.task_description h5 {
     font-weight: 700;
-    font-style: bold;
     font-size: 20px;
 }
-.task-description p{
+
+.task_description p {
     font-weight: 400;
-    font-style: normal;
     font-size: 14px;
 }
+
 /*-------------- Section 01 ended----------  */
 
 /*-------------- Section 02 started----------  */
+
+.cards_section {
+    margin: 50px 200px;
+    padding: 30px;
+}
+
+.all_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    width: 480px;
+    height: 580px;
+    background-color: var(--color-white);
+    border-radius: 15px;
+    border: 2px solid var(--color-light-gray);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.card_title {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;     
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border-radius: 15px 15px 0 0;
+    padding: 0;             
+}
+
+.card_title h6 {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    margin: 0;
+    text-align: center;
+    justify-items: center;
+    padding: 20px 0px;
+}
+.card_icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+}
+/* Card Description */
+.card_title p { 
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    color: var(--color-black);
+    text-align: left;
+}
+.padding{
+    padding: 0px 5px 0px 20px;
+}
+
+/* Description word  */
+.dec_title {
+    font-weight: 600; 
+}
+
+
 
