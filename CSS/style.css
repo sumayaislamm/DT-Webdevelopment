@@ -1,5 +1,6 @@
 :root {
     --color-primary: #0029FF;
+    --color-hover-btn: #001fcc;
     --color-secondary: #E9ECEF;
     --color-white: #FFFFFF;
     --color-black: #000000;
@@ -8,32 +9,78 @@
     --color-light-yellow: #FEFFC0;
 
 }
-body{
+
+body {
     margin: 0;
-}
-/* main navbar  */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--color-white);
-  background-color: var(--color-light-gray);
-  padding: 10px 150px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-/* Right side icons */
-.icon-btn {
-  background: none;
-  border: none;
-  color: var(--color-white);
-  cursor: pointer;
-}
-/* Vertical Dots  */
-.icon_more {
-  font-size: 22px;
-  position: relative;
-  bottom: 9px;
-  color: var(--color-primary);
-  cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* for all button  */
+.btn {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 121px;
+    height: 35px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--color-hover-btn);
+    transform: translateY(-2px);
+    color: var(--color-black);
+}
+
+/* ---------------- navbar Start ------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+    background-color: var(--color-light-gray);
+    padding: 10px 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Right side icons */
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+/* Vertical Dots  */
+.icon_more {
+    font-size: 22px;
+    position: relative;
+    bottom: 9px;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* --------------Navbar end---------------  */
+
+/* Main section  */
+
+/*-------------- Section 01 started----------  */
+
+.h2_and_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 150px;
+}
+
+.h2_and_btn h2 {
+    color: var(--color-primary);
+    font-weight: 700;
+    letter-spacing: 2%;
+    line-height: 100%;
+    font-style: bold;
+    font-size: 28px;
+}
