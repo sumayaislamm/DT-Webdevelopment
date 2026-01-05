@@ -129,9 +129,9 @@ dummyData.tasks[0].assets.forEach(asset => {
                 <button type="button">Table</button>
                 <button type="button">Help</button>
                 
-                <button type="button"><img src="../images/icons/arrow-curve-left-right.png" alt=""/></button>
-                <button type="button"><img src="../images/icons/arrow-curve-left-down.png" alt=""/></button>
-                <button type="button"><img src="../images/icons/arrow-expand-02.png" alt=""/></button>
+                <button type="button"><img src="../images/icons/arrowcurveleftright.png" alt=""/></button>
+                <button type="button"><img src="../images/icons/arrowcurveleftdown.png" alt=""/></button>
+                <button type="button"><img src="../images/icons/arrowexpand02.png" alt=""/></button>
                 <button type="button">Paragraph</button>
             </div>
             <textarea class="article_content" ></textarea>
