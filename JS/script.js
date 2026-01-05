@@ -55,7 +55,7 @@ dummyData.tasks[0].assets.forEach(asset => {
     // -----title
     const title = document.createElement("div");
     title.classList.add("card_title")
-    title.innerHTML = `<h6> ${asset.asset_title} </h6> <button class="icon_btn card_icon"><img src="../images/icons/i_icon.png" alt="profile icon"></button>`;
+    title.innerHTML = `<h6> ${asset.asset_title} </h6> <button class="icon_btn card_icon"><img src="../images/icons/iicon.png" alt="profile icon"></button>`;
     card.appendChild(title);
 
     // -----Description

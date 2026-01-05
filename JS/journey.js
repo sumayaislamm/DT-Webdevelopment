@@ -35,7 +35,7 @@ function updateJourneyBoard() {
     journeyBoardTitle.innerHTML = `
         ${expanded ? `<h6>Journey Board</h6>` : ``}
         <button class="arrow_icon">
-            <img src="../images/icons/${expanded ? "arrow reverse.png" : "arrow.png"}" alt="">
+            <img src="../images/icons/${expanded ? "arrow-reverse.png" : "arrow.png"}" alt="">
         </button>
     `;
 
