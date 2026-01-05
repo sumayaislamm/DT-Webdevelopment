@@ -2,7 +2,7 @@
 
 ## Overview
 This project is a **Frontend Internship assignment** for DeepThought CultureTech Ventures. It demonstrates skills in **HTML, CSS, and Vanilla JavaScript**, including dynamic rendering of content based on JSON data, reusable components, and responsive UI inspired by Figma designs.
-- **Live Demo:** 
+- **Live Demo:** https://dt-webdevelopment0.onrender.com/
 
 
 The project contains two main tasks:
