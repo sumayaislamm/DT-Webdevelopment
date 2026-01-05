@@ -1,4 +1,4 @@
-// Local JSON data (simplified version)
+
 const dummyData = {
     tasks: [
         {
@@ -63,10 +63,28 @@ dummyData.tasks[0].assets.forEach(asset => {
         card.appendChild(iframe);
     }
     else if (asset.asset_content_type === "threadbuilder") {
-     
+        card.innerHTML += `
+      <div class="thread_head"><span> <img src="../images/icons/upper sign.png" alt=""/> </span> 
+      <h4>Thread A</h4> 
+      <textarea placeholder="Enter text for Thread A"></textarea>
+      <textarea placeholder="Enter Sub-thread details"></textarea>
+      <select><option>Select Category</option></select>
+      <select><option>Select Process</option></select>
+      <button class="btn">+ Add Sub-thread</button>
+      <textarea placeholder="Summary for Thread A"></textarea>
+    `;
     }
     else if (asset.asset_content_type === "article") {
-       
+        if (asset.asset_title === "Structure your pointers") {
+            card.innerHTML += `<textarea placeholder="Write your article here..."></textarea>`;
+        } else if (asset.asset_title === "4SA Method") {
+            card.innerHTML += `
+        <textarea placeholder="Introduction: How to bring an idea into progress?"></textarea>
+        <textarea placeholder="Thread A: Strategy development details..."></textarea>
+        <textarea placeholder="Example 1: How will you put a concept into progress?"></textarea>
+        <button class="btn">See More</button>
+      `;
+        }
     }
 
     cardsContainer.appendChild(card);
