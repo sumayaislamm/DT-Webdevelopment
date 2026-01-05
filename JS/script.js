@@ -1,4 +1,3 @@
-
 const dummyData = {
     tasks: [
         {
@@ -23,12 +22,27 @@ const dummyData = {
                 {
                     asset_title: "4SA Method",
                     asset_description: "To Explore more read more",
-                    asset_content_type: "article"
+                    asset_content_type: "article",
+                    asset_content: [
+                        {
+                            title: "Introduction",
+                            text: "The 4SA Method explains how to bring an idea into progress."
+                        },
+                        {
+                            title: "Thread A",
+                            text: "How are you going to develop your strategy? Which method are you going to use to develop a strategy? What if the project is lengthy?"
+                        },
+                        {
+                            title: "Example 1",
+                            text: "You have a concept. How will you put it into progress?"
+                        }
+                    ]
                 }
             ]
         }
     ]
 };
+
 // All cards work ----------------
 
 const cardsContainer = document.querySelector(".all_cards");
@@ -93,10 +107,9 @@ dummyData.tasks[0].assets.forEach(asset => {
       </div>
       <button class="btn btn-thread">Add Sub-thread</button>
       <div class="last_texarea"> 
-      <label for="interpretation1">Sub Interpretation 1</label>
-      <textarea id="interpretation1" placeholder="Enter Text Here"></textarea>
-      </div>
-    `;
+      <label for="summary">Summary for Thread A</label>
+      <textarea id="summary" placeholder="Enter Text Here"></textarea>
+      </div>`;
     }
     else if (asset.asset_content_type === "article") {
         if (asset.asset_title === "Structure your pointers") {
@@ -127,30 +140,34 @@ dummyData.tasks[0].assets.forEach(asset => {
         }
 
         else if (asset.asset_title === "4SA Method") {
-    card.innerHTML += `
-        <div class="method_container">
+            const container = document.createElement("div");
+            container.classList.add("method_container");
 
-            <div class="method_block">
-                <h6 class="introduction">Introduction</h6>
-                <p>The 4SA Method, How to bring a idea into progress ?</p>
-                <button class="see_more_btn">See More</button>
-            </div>
+            asset.asset_content.forEach((item, index) => {
+                const block = document.createElement("div");
+                block.classList.add("method_block");
 
-            <div class="method_block">
-                <h6 class="without_introduction">Thread A</h6>
-                <p >How are you going to develop your strategy? Which method are you going to use to develop a strategy? What if the project is lengthy?</p>
-                <button class="see_more_btn">See More</button>
-                <div class="method_block">
-                <h6 class="without_introduction">Example 1</h6>
-                <p readonly>You have a concept, How will you put it into progress?</p>
-            </div>
-            </div>
+                block.innerHTML = `
+            <h6 class="${index === 0 ? "introduction" : "without_introduction"}">
+                ${item.title}
+            </h6>
+            <p class="method_text">${item.text}</p>
+            <button class="see_more_btn">See More</button>
+        `;
 
-          
+                const btn = block.querySelector(".see_more_btn");
+                const text = block.querySelector(".method_text");
 
-        </div>
-    `;
-}
+                btn.addEventListener("click", () => {
+                    text.classList.toggle("expanded");
+                    btn.textContent = text.classList.contains("expanded") ? "See Less" : "See More";
+                });
+
+                container.appendChild(block);
+            });
+
+            card.appendChild(container);
+        }
 
     }
 

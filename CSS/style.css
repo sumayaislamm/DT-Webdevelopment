@@ -1,6 +1,6 @@
 :root {
     --color-primary: #0029FF;
-    --color-hover-btn: #001fcc;
+    --color-hover-btn: #001fcc; 
     --color-secondary: #E9ECEF;
     --color-white: #FFFFFF;
     --color-black: #000000;
@@ -130,7 +130,6 @@ body {
 
 .notice_board {
     width: 50px;
-    /* original width */
     height: 580px;
     background-color: var(--color-white);
     border: 2px solid var(--color-light-gray);
@@ -492,4 +491,34 @@ body {
 .see_more_btn:hover {
     background-color: #e0e0e0;
     border-radius: 10px;
+}
+.method_text {
+    max-height: 40px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.method_text.expanded {
+    max-height: 200px;
+}
+
+
+
+/* ------------ Last Three Button --------- */
+
+.last_three_button{
+    width: 50px;
+    height: 180px;
+    position: absolute;
+    right: 20px;
+    margin: 0px 100px 100px 100px;
+    top: 1400px;
+}
+.last_three_button button{
+    background-color: var(--color-primary);
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
 }
